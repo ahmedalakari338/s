@@ -1,0 +1,1056 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nature Tours | Destinations</title>
+    <!--FACEBOOK-->
+    <meta property="og:image" content="https://bam-web-design.com/adventure/images/Adventure-Facebook.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="250">
+    <meta property="og:image:height" content="250">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bam-web-design.com/adventure/"/>
+    <meta property="og:title" content="Adventure - Demo Responsive Website" />
+    <meta property="og:description" content="Adventure - Demo Responsive Website" />
+    <!--Ion Icons-->
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <!--Our own stylesheet-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+    <style>
+        /* Global Styles */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-family: 'Nunito', ans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+section {
+	padding: 5rem 0;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.read-more {
+	background-color: #fff;
+	border-radius: .75rem;
+	width: 50%;
+	margin-top: 1rem;
+	align-content: center;
+}
+
+span.read-more {
+	font-size: 1.8rem;
+	font-color: #fff !important;
+	text-align: center;
+	background-color: #fff;
+}
+
+span.read-more a:hover {
+	color: #eb648c;
+}
+
+/* Header */
+header {
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.container {
+	width: 100%;
+	max-width: 98rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+.nav-brand {
+	width: 2rem;
+}
+
+.menu-icons {
+	font-size: 3.5rem;
+	color: #fafafa;
+	cursor: pointer;
+}
+
+.close i {
+	color: #eb648c;
+}
+
+.nav-list {
+	width: 25rem;
+	height: 100vh;
+	background-color: #d7d4ed;
+	position: fixed;
+	top: 0;
+	right: -26rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1500;
+	transition: all 650ms ease-in-out;
+}
+
+.nav-list.active {
+	right: 0;
+}
+
+.close {
+	position: absolute;
+	top: 1rem;
+	left: 1.5rem;
+}
+
+.nav-item {
+	margin: 1.5rem 0;
+}
+
+.nav-link {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: rgba(0,0,0,.8);
+}
+
+/* Hero */
+.hero {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-8TPg3tf-spw/XufTGXEiKdI/AAAAAAAAAKg/32NaPztE2HsSfAWr-zTm4G1YhQrifio6QCLcBGAsYHQ/s1600/header-bg.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-dVAEBf6jLA0/XufTE6B2IuI/AAAAAAAAAKY/CLtnK3z487IlMFh5PMtuDjbJPft9x-DtwCLcBGAsYHQ/s1600/wave-small.png") no-repeat;
+	background-size: cover;
+}
+
+.main-message {
+	width: 100%;
+	max-width: 50rem;
+	color: #fafafa;
+	transform: translateY(20%);
+}
+
+.main-message h2 {
+	font-size: 2.5rem;
+	color: red;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+.main-message h3 {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+}
+
+.main-message h1 {
+	font-family: 'Aldrich', sans-serif;
+	font-size: 4rem;
+	text-transform: uppercase;
+	margin: 1rem 0;
+}
+
+.main-message p {
+	font-weight: 400;
+}
+
+.btn {
+	background-color: #eb648c;
+	border-radius: 2rem;
+	color: #fafafa;
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 1rem 2.5rem;
+	text-transform: uppercase;
+	transition: background-color 650ms;
+	cursor: pointer;
+	font-size: 1.3rem;
+}
+
+.btn:hover {
+	background-color: #ce587b;
+}
+
+/* Experience the outdoors */
+.experience-outdoors {
+	padding: 0;
+}
+
+.title-heading {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom:5rem;
+	color: rgba(0,0,0,.7);
+}
+
+.title-heading h3 {
+	font-size: 1.4rem;
+}
+
+.title-heading h1 {
+	font-family: 'Aldrich', san-serif;
+	font-size: 2rem;
+	margin: .5rem 0 1rem;
+}
+
+.title-heading p {
+	text-transform: lowercase;
+}
+
+.activities-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 2.5rem;
+}
+
+.activities-grid-item {
+	height: 35rem;
+	padding: 5rem;
+	color: #fff;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.activities-grid-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 70%);
+	z-index: -1;
+}
+
+.activities-grid img {
+	max-width: 60px;
+	max-height: 60px;
+}
+.star-gazing{
+     background: url("https://1.bp.blogspot.com/-wI7S84OC-uU/XufS2m3T1oI/AAAAAAAAAJ8/HbPuy_3ljzo8jO1uKKNMDdgxkCfftAmPgCLcBGAsYHQ/s1600/stars.jpg");
+font-family: 'Cairo', sans-serif;
+font-size:20px;
+
+}
+
+.hiking {
+	background: url("https://1.bp.blogspot.com/-4v33W_Uip4g/XufS0IPhJnI/AAAAAAAAAJ0/l2l7NpI7cnAM194B4T0QMTDtq8_mXYHXQCLcBGAsYHQ/s1600/hiking.jpg");
+
+font-family: 'Cairo', sans-serif;
+font-size:20px;
+}
+
+
+.camping-grid {
+	background: url("https://1.bp.blogspot.com/-dRvidnBA1gI/XufSwUxHnyI/AAAAAAAAAJs/Bbj9cVsKbmErDiyGES_R70fLOUdrFyOAQCLcBGAsYHQ/s1600/camping.jpg");
+
+font-family: 'Cairo', sans-serif;
+font-size:20px;
+}
+
+.forest {
+	background: url("https://2.bp.blogspot.com/-BnslqgG2AjA/XuqSg1gGE_I/AAAAAAAAALw/vWS1FUkk3K0m6i563QQZw7zIaxITrTRTQCLcBGAsYHQ/s1600/forest-2.jpg");
+}
+
+ .wilderness {
+	background: url("https://2.bp.blogspot.com/-z1csZhRVU5A/XuqS3_nFCNI/AAAAAAAAAMU/G12JwEjlfU01v01UnSxh_rnu7zJw62jPgCLcBGAsYHQ/s1600/wilderness.jpg");
+}
+
+.activities-grid-item i {
+	font-size: 4rem;
+	color: #eb648c;
+}
+
+.activities-grid-item h1 {
+	font-family: 'Aldrich', sans-serif;
+	font-size: 1.7rem;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+/* Testimonials */
+.testimonials {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-J0fgtYaJQ5A/XufTR-COLNI/AAAAAAAAAK0/U9tCmLAxsj4aL3hWjoFitrFwnXrf8q2vACLcBGAsYHQ/s1600/testimonials-bg.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-bz9gPrB0_lA/XufTCFcbW8I/AAAAAAAAAKQ/ebo0IGHTi4gmRj6alY5Suz4FkSvg6TjnACLcBGAsYHQ/s1600/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+.testimonial {
+	width: 100%;
+	color: #fafafa;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.testimonial-text-box {
+	padding: 0 1.5rem;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.testimonial-text-box i {
+	position: absolute;
+	top: -8rem;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 8rem;
+	color: #eb648c;
+	opacity: .5;
+	z-index: -1;
+}
+
+.testimonial-customer img {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	border: 3px solid #eb648c;
+}
+
+/* Begin Adentures */
+.adventure-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.adventure-grid-item p {
+	color: rgba(0,0,0,0.7);
+}
+
+footer {
+	padding: 2.5rem 0;
+	background-color: #d7d4ed;
+	text-align: center;
+	color: rgba(0,0,0,0.7);
+}
+
+/* Media Queries */
+@media screen and (min-width: 350px) {
+	.main-message {
+		transform: translateY(20%);
+	}
+}
+
+@media screen and (min-width: 470px) {
+	header {
+			height: 8rem;
+		}
+	
+	.hero::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-MgnLUPCSzpM/XufS_vnnIcI/AAAAAAAAAKM/1S3yRzIiNYcLv8qY1qBz4jDRSQLR76y6wCLcBGAsYHQ/s1600/wave-medium.png");
+		background-size: cover;
+	}
+	
+	.testimonials::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-NgUys22_cu0/XufS9RyialI/AAAAAAAAAKI/Q3yRBCVTt-YrDHyQM9jkz_f9vAfFbLYawCLcBGAsYHQ/s1600/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 700px) {
+		header {
+			height: 8rem;
+		}
+		
+		.nav-brand {
+			width: 3.5rem;
+		}
+		
+		.nav-list {
+			width: initial;
+			height: initial;
+			background-color: transparent;
+			position: initial;
+			top: initial;
+			right: initial;
+			flex-direction: row;
+			transition: initial;
+		}
+		
+		.menu-icons {
+			display: none;
+		}
+		
+		.nav-item {
+			margin: 0 2.5rem;
+		}
+		
+		.nav-link,
+		.current {
+			color: #fafafa;
+			position: relative;
+			font-size: 1.3rem;
+		}
+		
+		.nav-link::before,
+		.current::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -.5rem;
+			background-color: #eb648c;
+			width: 100%;
+			height: 2px;
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 650ms;
+		}
+		
+		.current::before {
+			transform: scaleX(1);
+		}
+		
+		.nav-link:hover::before {
+			transform: scaleX(1);
+		}
+		
+		.hero {
+			height: 60vh;
+		}
+		
+		.main-message {
+			transform: translateY(20%);
+		}
+		
+		.title-heading h1 {
+			font-size: 2.5rem;
+		}
+}
+
+@media screen and (min-width: 950px) {
+	.hero::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-ZHIWUe5Tc64/XufS7NEmQvI/AAAAAAAAAKE/BG1IAN6ma2YU01bQJSC2r-tLcc80MrQwQCLcBGAsYHQ/s1600/wave-large.png");
+		background-size: cover;
+	}
+	
+	.testimonials::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-pe_rY6UDY7w/XufS49OzDFI/AAAAAAAAAKA/L1kEaRSBjxQVj0l7pfBI3MnPcJDoWFLtgCLcBGAsYHQ/s1600/wave-large-reversed.png");
+		background-size: cover;
+	}
+}
+
+/* Facebook Button */
+
+img.facebook {
+	max-width: 250px !important;
+	margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+	.zoom {
+	  padding: 0px;
+	  transition: transform .5s; /* Animation */
+	  min-width: 250px;
+	}
+
+	.zoom:hover {
+	  transform: scale(1.05); /* (105% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
+}
+
+
+/* Hiking */
+.hero-hiking {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-4v33W_Uip4g/XufS0IPhJnI/AAAAAAAAAJ0/l2l7NpI7cnAM194B4T0QMTDtq8_mXYHXQCLcBGAsYHQ/s1600/hiking.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-hiking::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-dVAEBf6jLA0/XufTE6B2IuI/AAAAAAAAAKY/CLtnK3z487IlMFh5PMtuDjbJPft9x-DtwCLcBGAsYHQ/s1600/wave-small.png") no-repeat;
+	background-size: cover;
+}
+
+.testimonials-hiking {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-4v33W_Uip4g/XufS0IPhJnI/AAAAAAAAAJ0/l2l7NpI7cnAM194B4T0QMTDtq8_mXYHXQCLcBGAsYHQ/s1600/hiking.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials-hiking::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-bz9gPrB0_lA/XufTCFcbW8I/AAAAAAAAAKQ/ebo0IGHTi4gmRj6alY5Suz4FkSvg6TjnACLcBGAsYHQ/s1600/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 470px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-hiking::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-MgnLUPCSzpM/XufS_vnnIcI/AAAAAAAAAKM/1S3yRzIiNYcLv8qY1qBz4jDRSQLR76y6wCLcBGAsYHQ/s1600/wave-medium.png");
+		background-size: cover;
+	}
+	
+	.testimonials-hiking::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-NgUys22_cu0/XufS9RyialI/AAAAAAAAAKI/Q3yRBCVTt-YrDHyQM9jkz_f9vAfFbLYawCLcBGAsYHQ/s1600/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 700px) {
+		header {
+			height: 22rem;
+		}
+		
+	.hero-hiking {
+			height: 60vh;
+		}
+}
+
+@media screen and (min-width: 950px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-hiking::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-ZHIWUe5Tc64/XufS7NEmQvI/AAAAAAAAAKE/BG1IAN6ma2YU01bQJSC2r-tLcc80MrQwQCLcBGAsYHQ/s1600/wave-large.png");
+		background-size: cover;
+	}
+	
+	.testimonials-hiking::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-pe_rY6UDY7w/XufS49OzDFI/AAAAAAAAAKA/L1kEaRSBjxQVj0l7pfBI3MnPcJDoWFLtgCLcBGAsYHQ/s1600/wave-large-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+		header {
+			height: 50rem;
+		}
+}
+
+/* Destinations */
+.aust {
+	background: url("https://3.bp.blogspot.com/-yMwoa2aZJw8/XuqSd-NDw1I/AAAAAAAAALk/VDsX63rfGdIbHyQoPybUjp7Kh6i-4z5WwCLcBGAsYHQ/s1600/aust.jpg");
+}
+
+.nz {
+	background: url("https://1.bp.blogspot.com/-tBz5PfxIiHg/XuqWPu4GYlI/AAAAAAAAAM0/asTrfyZftS8z5wWrwYjzjSAxfbXABF0ygCLcBGAsYHQ/s1600/nz.jpg");
+}
+.thai {
+	background: url("https://2.bp.blogspot.com/-_5oLVdLL0to/XuqS1FmkA7I/AAAAAAAAAMQ/fJcIxeJCT6gENh_OA4IQbyduPY5EcZpLQCLcBGAsYHQ/s1600/thai.jpg");
+} 
+
+.hero-destinations {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-wI7S84OC-uU/XufS2m3T1oI/AAAAAAAAAJ8/HbPuy_3ljzo8jO1uKKNMDdgxkCfftAmPgCLcBGAsYHQ/s1600/stars.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-destinations::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-dVAEBf6jLA0/XufTE6B2IuI/AAAAAAAAAKY/CLtnK3z487IlMFh5PMtuDjbJPft9x-DtwCLcBGAsYHQ/s1600/wave-small.png") no-repeat;
+	background-size: cover;
+}
+
+.testimonials-destinations {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://4.bp.blogspot.com/-pddqc7eBucE/XuqTGFoFglI/AAAAAAAAAMk/8R8ixePxSc0C_LtN0cUOOKC8TrCORSzagCLcBGAsYHQ/s1600/destinations.png") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials-destinations::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-bz9gPrB0_lA/XufTCFcbW8I/AAAAAAAAAKQ/ebo0IGHTi4gmRj6alY5Suz4FkSvg6TjnACLcBGAsYHQ/s1600/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 470px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-destinations::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-MgnLUPCSzpM/XufS_vnnIcI/AAAAAAAAAKM/1S3yRzIiNYcLv8qY1qBz4jDRSQLR76y6wCLcBGAsYHQ/s1600/wave-medium.png");
+		background-size: cover;
+	}
+	
+	.testimonials-destinations::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-NgUys22_cu0/XufS9RyialI/AAAAAAAAAKI/Q3yRBCVTt-YrDHyQM9jkz_f9vAfFbLYawCLcBGAsYHQ/s1600/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 700px) {
+		header {
+			height: 22rem;
+		}
+		
+	.hero-destinations {
+			height: 60vh;
+		}
+}
+
+@media screen and (min-width: 950px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-destinations::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-ZHIWUe5Tc64/XufS7NEmQvI/AAAAAAAAAKE/BG1IAN6ma2YU01bQJSC2r-tLcc80MrQwQCLcBGAsYHQ/s1600/wave-large.png");
+		background-size: cover;
+	}
+	
+	.testimonials-destinations::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-pe_rY6UDY7w/XufS49OzDFI/AAAAAAAAAKA/L1kEaRSBjxQVj0l7pfBI3MnPcJDoWFLtgCLcBGAsYHQ/s1600/wave-large-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+		header {
+			height: 50rem;
+		}
+}
+
+/* Star Gazing */
+.stargazing p {
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+}
+
+.hero-stargazing {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://4.bp.blogspot.com/-wkhimTv9_bc/XuqS0VYMXoI/AAAAAAAAAMM/iTTCC8SJhA0vjjpDPNZxOVxvlHBjkRQjQCLcBGAsYHQ/s1600/stargazing.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-stargazing::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-dVAEBf6jLA0/XufTE6B2IuI/AAAAAAAAAKY/CLtnK3z487IlMFh5PMtuDjbJPft9x-DtwCLcBGAsYHQ/s1600/wave-small.png") no-repeat;
+	background-size: cover;
+}
+
+.testimonials-stargazing {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://4.bp.blogspot.com/-wkhimTv9_bc/XuqS0VYMXoI/AAAAAAAAAMM/iTTCC8SJhA0vjjpDPNZxOVxvlHBjkRQjQCLcBGAsYHQ/s1600/stargazing.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials-stargazing::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-bz9gPrB0_lA/XufTCFcbW8I/AAAAAAAAAKQ/ebo0IGHTi4gmRj6alY5Suz4FkSvg6TjnACLcBGAsYHQ/s1600/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 470px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-stargazing::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-MgnLUPCSzpM/XufS_vnnIcI/AAAAAAAAAKM/1S3yRzIiNYcLv8qY1qBz4jDRSQLR76y6wCLcBGAsYHQ/s1600/wave-medium.png");
+		background-size: cover;
+	}
+	
+	.testimonials-stargazing::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-NgUys22_cu0/XufS9RyialI/AAAAAAAAAKI/Q3yRBCVTt-YrDHyQM9jkz_f9vAfFbLYawCLcBGAsYHQ/s1600/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 700px) {
+		header {
+			height: 22rem;
+		}
+		
+	.hero-stargazing {
+			height: 60vh;
+		}
+}
+
+@media screen and (min-width: 950px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-stargazing::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-ZHIWUe5Tc64/XufS7NEmQvI/AAAAAAAAAKE/BG1IAN6ma2YU01bQJSC2r-tLcc80MrQwQCLcBGAsYHQ/s1600/wave-large.png");
+		background-size: cover;
+	}
+	
+	.testimonials-stargazing::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-pe_rY6UDY7w/XufS49OzDFI/AAAAAAAAAKA/L1kEaRSBjxQVj0l7pfBI3MnPcJDoWFLtgCLcBGAsYHQ/s1600/wave-large-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+		header {
+			height: 50rem;
+		}
+}
+
+/* Camping */
+.camping p {
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+}
+.hero-camping {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-8TPg3tf-spw/XufTGXEiKdI/AAAAAAAAAKg/32NaPztE2HsSfAWr-zTm4G1YhQrifio6QCLcBGAsYHQ/s1600/header-bg.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.hero-camping::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-dVAEBf6jLA0/XufTE6B2IuI/AAAAAAAAAKY/CLtnK3z487IlMFh5PMtuDjbJPft9x-DtwCLcBGAsYHQ/s1600/wave-small.png") no-repeat;
+	background-size: cover;
+}
+
+.testimonials-camping {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(49,24,131,0.9) 0%, rgba(72,56,149,0.8) 100%), url("https://1.bp.blogspot.com/-dRvidnBA1gI/XufSwUxHnyI/AAAAAAAAAJs/Bbj9cVsKbmErDiyGES_R70fLOUdrFyOAQCLcBGAsYHQ/s1600/camping.jpg") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.testimonials-camping::before {
+	content: "";
+	position: absolute;
+	top: -3px;
+	left: 0;
+	width: 100%;
+	height: 4.7rem;
+	background: url("https://1.bp.blogspot.com/-bz9gPrB0_lA/XufTCFcbW8I/AAAAAAAAAKQ/ebo0IGHTi4gmRj6alY5Suz4FkSvg6TjnACLcBGAsYHQ/s1600/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+@media screen and (min-width: 470px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-camping::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-MgnLUPCSzpM/XufS_vnnIcI/AAAAAAAAAKM/1S3yRzIiNYcLv8qY1qBz4jDRSQLR76y6wCLcBGAsYHQ/s1600/wave-medium.png");
+		background-size: cover;
+	}
+	
+	.testimonials-camping::before {
+		height: 9.4rem;
+		background: url("https://1.bp.blogspot.com/-NgUys22_cu0/XufS9RyialI/AAAAAAAAAKI/Q3yRBCVTt-YrDHyQM9jkz_f9vAfFbLYawCLcBGAsYHQ/s1600/wave-medium-reversed.png");
+		background-size: cover;
+	}
+}
+
+@media screen and (min-width: 700px) {
+		header {
+			height: 22rem;
+		}
+		
+	.hero-camping {
+			height: 60vh;
+		}
+}
+
+@media screen and (min-width: 950px) {
+		header {
+			height: 18rem;
+		}
+		
+	.hero-camping::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-ZHIWUe5Tc64/XufS7NEmQvI/AAAAAAAAAKE/BG1IAN6ma2YU01bQJSC2r-tLcc80MrQwQCLcBGAsYHQ/s1600/wave-large.png");
+		background-size: cover;
+	}
+	
+	.testimonials-camping::before {
+		height: 22.7rem;
+		background: url("https://1.bp.blogspot.com/-pe_rY6UDY7w/XufS49OzDFI/AAAAAAAAAKA/L1kEaRSBjxQVj0l7pfBI3MnPcJDoWFLtgCLcBGAsYHQ/s1600/wave-large-reversed.png");
+		background-size: cover;
+	}
+}
+
+    </style>
+</head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=2276973575948624&autoLogAppEvents=1"></script>
+	
+    <header>
+    	<div class="container">
+        	<nav>
+            	<div class="nav-brand">
+                	<a href="index.html">
+                    	<img src="https://1.bp.blogspot.com/-b92jgBJi1xE/XufS0G2c0zI/AAAAAAAAAJw/RjBL0-u5JsYpkrAF4VOIosBFyIXhOGCogCLcBGAsYHQ/s1600/logo.png" alt="Adventure Tours Logo">
+                    </a>
+                </div>
+                
+                <div class="menu-icons open">
+                	<i class="icon ion-md-menu"></i>
+                </div>
+                
+                <ul class="nav-list">
+                	<div class="menu-icons close">
+                		<i class="icon ion-md-close"></i>
+                	</div>
+                    <li class="nav-item">
+                    	<a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a href="#" class="nav-link current">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a href="hiking.html" class="nav-link">Hiking Tours</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a href="booking.html" class="nav-link">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a href="#" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+    	<section class="hero-destinations">
+            <div class="container">
+                <div class="main-message">
+                	<h2>Demo site only</h2>
+                    <h3>The Great Outdoor</h3>
+                    <h1>Destinations</h1>
+                    <p>
+                        Three exciting destinations to choose from!
+                    </p>
+                    <div class="cta">
+                        <a class="btn" href="booking.html">Book Now</a>
+                    </div>
+                </div>
+            </div>
+    	</section>
+        
+        <section>
+        	<div class="container">
+            	<div class="title-heading">
+                	<h3>Experience</h3>
+                    <h1>Our Destinations</h1>
+                    <p>3 different countries to choose from.</p>
+                </div>
+                
+                <div class="activities-grid">
+                	<!-- grid item #1 -->
+                    <div class="activities-grid-item aust">
+                    	<img src="images/Icons/aust-icon.png" alt="Destination Aust" class="hiking-tour">
+                        <h1>Australia</h1>
+                        <p>From the tropical rain forests in the north, to the temperate mountain ranges in the south and the alpine areas of New South Wales and Victoria there is plenty of things to see and diverse terrian to choose from!</p>
+                    </div>
+                    <!-- grid item #2 -->
+                    <div class="activities-grid-item nz">
+                    	<img src="images/Icons/nz-icon.png" alt="Destination NZ" class="hiking-tour">
+                        <h1>New Zealand</h1>
+                        <p>New Zealand the land of boiling mud, is so diverse, with live volcanos, hot springs, snow covered peaks in the winter, hiking in New Zealand is an experience not to miss and one that should be on your must do list!</p>
+                    </div>
+                    <!-- grid item #3 -->
+                    <div class="activities-grid-item thai">
+                    	<img src="images/Icons/thailand-icon.png" alt="Destination Thailand" class="hiking-tour">
+                        <h1>Thailand</h1>
+                        <p>Thailand, known the world over as the Land of Smiles, with it's enique cuisine and ancient ruins, is another place you must visit, our trekking tours in the north in the Chiang Mai and Chiang Rai areas are fantastic!</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials-destinations">
+        	<div class="container">
+            	<div class="testimonial">
+                	<div class="testimonial-text-box">
+                    	<p>This trip was amazing! I can't wait to do it all over again.</p>
+                        <i class="icon ion-md-quote"></i>
+                    </div>
+                    <div class="testimonial-customer">
+                    	<img src="https://1.bp.blogspot.com/-5KkxmJvgoI4/XufS2Douu7I/AAAAAAAAAJ4/5TBi6HlEvtkipgH4HhnWzrqgFhZePLLcQCLcBGAsYHQ/s1600/profile-pic.jpg" alt="Martin G.">
+                        <h1>Ahmed Alakari</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="begin-adventure">
+        	<div class="container">
+            	<div class="title-heading">
+                	<h3>Let the</h3>
+                    <h1>Adventure begin</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                <div class="adventure-grid">
+                	<!-- Adventure Grid #1 -->
+                	<div class="adventure-grid-item">
+                    	<p>
+                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, accusantium, aliquid omnis laudantium sequi autem quo dicta accusamus labore fugiat a suscipit obcaecati dolor beatae ratione placeat sed debitis dolorum.
+                            </p>
+                    </div>
+                    <!-- Adventure Grid #2 -->
+                	<div class="adventure-grid-item">
+                    	<p>
+                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, accusantium, aliquid omnis laudantium sequi autem quo dicta accusamus labore fugiat a suscipit obcaecati dolor beatae ratione placeat sed debitis dolorum.
+                            </p>
+                    </div>
+                </div>
+                <a class="btn" href="#">Book your adventure</a>
+            </div>
+        </section>
+        
+        <div align="center" class="fb-share-button"  data-href="https://www.bam-web-design.com/bakery/index.html" data-layout="button_count" data-size="large">
+             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.bam-web-design.com%2Fmobile%2Findex.html&amp;src=sdkpreparse" target="new"><img class="img-fluid zoom facebook mb-3" src="images/Share-on-Facebook-button-250x53.png" alt="Share to Facebook"/></a>
+        </div>       
+        
+    </main>
+
+	<footer>
+    	<p>&copy; 2019 Nature Tours, All rights reserved</p>
+    	<p>DEMO SITE - Built by <a href="https://www.bam-web-design.com/mobile/" target="_blank">Bam Web Design</a></p>
+    </footer>
+
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
